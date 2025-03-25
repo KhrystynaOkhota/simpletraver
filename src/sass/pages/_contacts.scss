@@ -1,0 +1,234 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.s-contacts {
+  &:not(.--bg) {
+    padding: 40px 0 100px 0;
+  }
+
+  &.--bg {
+    padding: 90px 0 100px 0;
+
+    &:before {
+      content: '';
+      width: calc(100% - 100px);
+      height: 100%;
+      background: rgba(251, 247, 243, 1);
+      border-radius: 50px;
+      left: 50px;
+      top: 0;
+      position: absolute;
+    }
+
+  }
+
+  & .heading {
+    margin-bottom: 28px;
+    @media (max-width: $breakpoint-md) {
+      margin-top: 30px;
+    }
+  }
+
+  & .accent-info {
+    margin-bottom: 38px;
+  }
+
+  & .btn-primary {
+    margin-top: 38px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    & img {
+      height: 100%;
+      width: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+
+  .contact {
+    &__list {
+
+    }
+
+
+    &__info {
+      margin-top: 24px;
+      @media (max-width: $breakpoint-md) {
+        margin: 0;
+        width: calc(100% - 37px);
+      }
+
+      & > * {
+        @include fontSize(14, 16);
+        font-family: "Archivo", sans-serif;
+      }
+
+      & ul {
+        margin-left: 14px;
+
+        & li {
+          &:not(&:last-child) {
+            margin-right: 5px;
+          }
+
+          & i {
+            font-size: 15px;
+            color: rgba(180, 102, 80, 0.4);
+
+            &.icon-viber {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+
+      &.align-center {
+        @media (max-width: $breakpoint-md) {
+          -webkit-box-pack: start;
+          -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    & > i {
+      @include fontSize(20, 60);
+      color: rgba(180, 102, 80, 1);
+      padding-right: 12px;
+      @media (max-width: $breakpoint-md) {
+        font-size: 24px;
+      }
+    }
+
+
+  }
+
+  &__cta {
+    background-color: #D8D6D1;
+    padding: 20px 0;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 100vw;
+      background: #D8D6D1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      margin-left: calc((-100vw + 100%) / 2);
+      z-index: -1;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      padding: 12px 12px 0 12px;
+    }
+  }
+
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute !important;
+
+    &--wrap {
+      padding-bottom: 69%;
+      border-radius: 50px;
+      border: 10px solid rgba(255, 255, 255, 1);
+      position: relative;
+      overflow: hidden;
+      @media (max-width: $breakpoint-md) {
+        height: 350px;
+      }
+    }
+  }
+
+
+  & .social {
+    gap: 10px;
+
+    &__title {
+      margin-right: 18px;
+    }
+
+    &__item {
+      background: rgba(29, 159, 150, 1);
+    }
+  }
+
+  & .contact {
+    &__list {
+      gap: 20px;
+      display: grid;
+      margin-bottom: 40px;
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 14px;
+
+      & i {
+        font-size: 21px;
+        text-align: center;
+        color: $accent-color;
+        font-weight: bold;
+      }
+
+      & a {
+        &[href^="mailto:"] {
+          color: $accent-color;
+        }
+
+      }
+    }
+  }
+}
+
+.s-cta {
+  padding: 92px 0 100px 0;
+  @media (max-width: $breakpoint-md) {
+    padding: 45px 0 52px 0;
+  }
+
+  & .heading {
+    color: $white-color;
+    margin-bottom: 34px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    width: calc(100% - 100px);
+    border-radius: 900px;
+    overflow: hidden;
+    background: rgba(49, 58, 87, 1);
+    @media (max-width: $breakpoint-md) {
+      left: 0;
+      width: 100%;
+      border-radius: 0;
+    }
+
+    & img {
+      height: 100%;
+      width: 100%;
+      opacity: 0.5;
+      object-fit: cover;
+    }
+  }
+}

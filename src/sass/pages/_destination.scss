@@ -1,0 +1,27 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.destination {
+  &__item {
+    background: rgba(251, 247, 243, 1);
+    & .btn-transparent{
+      padding: 10px 15px;
+    }
+  }
+
+  &__info {
+    padding: 12px;
+
+    &-heading {
+      color: $accent-color;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      margin-bottom: 20px;
+    }
+  }
+
+}

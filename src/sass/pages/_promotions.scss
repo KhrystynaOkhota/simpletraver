@@ -1,0 +1,76 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.promotion {
+  &__item {
+    background: rgba(251, 247, 243, 1);
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &-wrap {
+      padding-bottom: 68%;
+
+    }
+  }
+
+  &__info {
+    padding: 13px 20px 25px 20px;
+    background: rgba(251, 247, 243, 1);
+
+    &-heading {
+      color: $accent-color;
+      margin-bottom: 4px;
+    }
+
+    &-date {
+      color: rgba(170, 170, 170, 1);
+      margin-bottom: 5px;
+    }
+
+    &-text {
+    }
+  }
+}
+
+.s-promotions {
+  &__wrap {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(49, 58, 87, 0.2);;
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 360px) {
+      gap: 20px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  & .heading {
+    margin-bottom: 33px;
+  }
+
+  .pagination {
+    margin-top: 40px;
+  }
+
+  & .btn-transparent {
+    margin-top: 30px;
+  }
+}
+
+.s-recommended-prom {
+  & .heading {
+    margin-bottom: 33px;
+  }
+}

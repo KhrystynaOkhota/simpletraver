@@ -1,0 +1,44 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  position: relative;
+  box-shadow: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+
+  font-size: 18px;
+  line-height: 100%;
+  padding: 15px 32px;
+  border: 1px solid $accent-color;
+  text-align: center;
+  display: inline-block;
+  font-weight: 500;
+  border-radius: 50px;
+  @include transition(.3);
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+    background: $accent-color;
+    color: $white-color;
+
+    &:hover {
+
+    }
+  }
+
+  &-transparent {
+    // border: 1px solid $accent-color;
+    color: $accent-color;
+
+    &:hover {
+
+    }
+  }
+}
+
+

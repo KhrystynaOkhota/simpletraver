@@ -187,8 +187,8 @@
 
       & a {
         &[href^="mailto:"] {
-          color: $accent-color;
-        }
+           color: $accent-color;
+         }
 
       }
     }

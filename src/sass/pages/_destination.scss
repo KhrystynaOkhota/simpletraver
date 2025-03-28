@@ -2,16 +2,25 @@
 @import "../abstracts/variables";
 
 
-.destination {
+.resort {
   &__item {
     background: rgba(251, 247, 243, 1);
-    & .btn-transparent{
+
+    & .btn-transparent {
       padding: 10px 15px;
     }
   }
 
   &__info {
     padding: 12px;
+
+    & .advantage__wrap {
+      gap: 16px;
+
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      margin-bottom: 11px;
+    }
 
     &-heading {
       color: $accent-color;
@@ -21,6 +30,11 @@
 
     &-text {
       margin-bottom: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp:4 ;
+      -webkit-box-orient: vertical;
     }
   }
 

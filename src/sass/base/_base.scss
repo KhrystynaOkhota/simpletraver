@@ -7,12 +7,26 @@
   margin: 0 auto;
   background-color: $white-color;
 }
-.border-radius{
+
+.border-radius {
   border-radius: 10px;
   overflow: hidden;
 }
 
+.decor {
+  padding-left: 122px;
+  position: relative;
 
+  &:before {
+    content: '';
+    width: 122px;
+    height: 1px;
+    background: #1D9F96;
+    position: absolute;
+    left: -20px;
+    top: 21px;
+  }
+}
 
 
 html:not(.touch-screen)::-webkit-scrollbar, html:not(.touch-screen) *::-webkit-scrollbar {

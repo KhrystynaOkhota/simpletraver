@@ -18,108 +18,6 @@ jQuery(function ($) {
     if (is_Chrome) {
         $('html').addClass('chrome');
     }
-    /*
-
-        _functions.getSwOptions = function (swiper) {
-            let options = swiper.data('options');
-            options = (!options || typeof options !== 'object') ? {} : options;
-            const $p = swiper.closest('.swiper-entry'),
-                slidesLength = swiper.find('>.swiper-wrapper>.swiper-slide').length;
-            if (!options.pagination) options.pagination = {
-                el: $p.find('.swiper-pagination')[0],
-                clickable: true,
-
-
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">0' + (index + 1) + '</span>';
-                }
-
-            };
-            if (!options.navigation) options.navigation = {
-                nextEl: $p.find('.swiper-button-next')[0],
-                prevEl: $p.find('.swiper-button-prev')[0]
-            };
-            options.preloadImages = false;
-            options.lazy = {
-                loadPrevNext: true
-            };
-            options.observer = true;
-            options.observeParents = true;
-            options.watchOverflow = true;
-            options.centerInsufficientSlides = true;
-            if (!options.speed) options.speed = 500;
-            options.roundLengths = true;
-            if (isTouchScreen) options.direction = "horizontal";
-            if (slidesLength <= 1) {
-                options.loop = false;
-                $p.find('.swiper-wrapper').css({
-                    "cursor": "default"
-                })
-            }
-            if (options.customFraction) {
-                $p.addClass('custom-fraction');
-                if (slidesLength > 1 && slidesLength < 10) {
-                    $p.find('.custom-current').text('1');
-                    $p.find('.custom-total').text(slidesLength);
-                } else if (slidesLength > 1) {
-                    $p.find('.custom-current').text('1');
-                    $p.find('.custom-total').text(slidesLength);
-                }
-            }
-            return options;
-        };
-        _functions.initSwiper = function (el) {
-            const swiper = new Swiper(el[0], _functions.getSwOptions(el));
-        }
-        ;
-        $('.swiper-entry .swiper-container').each(function () {
-            _functions.initSwiper($(this));
-        });
-
-
-        //custom fraction
-        $('.custom-fraction').each(function () {
-            var $this = $(this),
-                $thisSwiper = $this.find('.swiper-container')[0].swiper;
-
-            $thisSwiper.on('slideChange', function () {
-                $this.find('.custom-current').text(
-                    function () {
-                        if ($thisSwiper.realIndex < 9) {
-                            return ($thisSwiper.realIndex + 1)
-                        } else {
-                            return $thisSwiper.realIndex + 1
-                        }
-                    }
-                )
-            });
-        });
-
-
-        // video stop/play
-        $('.banner-slider').each(function () {
-            let $thisSwiper = $('.banner-slider').find('.swiper-container')[0].swiper;
-
-            $thisSwiper.on('slideChange', function () {
-
-                var $cSlides = $('.swiper-container').find('.banner-slide');
-                _functions.customSlide($thisSwiper, $cSlides);
-
-            });
-        });
-        _functions.customSlide = function (swiperObj, $customSlides) {
-            var slideTo = $customSlides.eq(swiperObj.activeIndex),
-                slideFrom = $customSlides.eq(swiperObj.previousIndex);
-
-            var prevSlideVideo = slideFrom.find('video'),
-                activeSlideVideo = slideTo.find('video');
-
-            if (prevSlideVideo.length) prevSlideVideo[0].pause();
-            if (prevSlideVideo.length) prevSlideVideo[0].currentTime = 0;
-            if (activeSlideVideo.length) activeSlideVideo[0].play();
-        }
-
-    */
 
     /*new slider*/
     _functions.getSwOptions = function (swiper) {
@@ -351,7 +249,7 @@ jQuery(function () {
 
     _functions.scrollWidth = function () {
         let scrWidth = $(window).outerWidth() - $('body').innerWidth();
-        $('body, .header__inner, .h-menu-toggle, .h-search-wrapp').css({
+        $('body,  .h-menu-toggle, .h-search-wrapp').css({
             "paddingRight": `${scrWidth}px`
         });
     }
@@ -363,23 +261,6 @@ jQuery(function () {
     });
 
 
-});
-
-
-$(function () {
-
-    var body = $('body');
-    $('.lang__current').on('click', function (e) {
-
-        e.preventDefault();
-        $('.lang__wrap').toggleClass('open');
-    });
-
-    body.on('click', function (e) {
-        if (!$(e.target).closest('.lang__wrap').length) {
-            $('.lang__wrap').removeClass('open');
-        }
-    });
 });
 
 
@@ -462,26 +343,27 @@ if ($('.select-box').length) {
     $('.extra-select').SumoSelect({ placeholder: '', search: true, searchText: '', okCancelInMulti: true, csvDispCount: 0, nativeOnDevice: [], is_floating: false });
     $('.btnOk').text(btnText);
 }
-/*
-const scrollToTopButton = document.getElementById('js-top');
-const scrollFunc = () => {
-        let y = window.scrollY;
-        if (y > 0) {
-            scrollToTopButton.className = "top-link btn-top show";
-        } else {
-            scrollToTopButton.className = "top-link btn-top hide";
-        }
-    };
-window.addEventListener("scroll", scrollFunc);
-const scrollToTop = () => {
-        const c = document.documentElement.scrollTop || document.body.scrollTop;
-        if (c > 0) {
-            window.requestAnimationFrame(scrollToTop);
-            window.scrollTo(0, c - c / 10);
-        }
+
+
+// read more
+$('.read-more-toggle').on('click', function () {
+    var $tp = $(this).parent();
+    if ($(this).hasClass('active')) {
+        $tp.find('.read-more-text-wrapper').animate({ 'height': 330 });
+        $('.read-more-text').animate({ height: 0 }, 600).removeClass('active');
+        setTimeout(function () {
+            if ($('.portfolio-wrapper').length) {
+                $('html, body').animate({ scrollTop: $('.portfolio-wrapper').offset().top - $('header').outerHeight() }, 700);
+            }
+            if ($('.read-more-text').length) {
+                $('html, body').animate({ scrollTop: $('.read-more-text').closest('.sect-spacer').offset().top - $('header').outerHeight() - 30 }, 700);
+            }
+        }, 700);
+    } else {
+        $tp.find('.read-more-text-wrapper').animate({ 'height': $tp.find('.read-more-text-content').height() }, function () {
+            $(this).css({ 'height': 'auto' });
+        });
+        $('.read-more-text').animate({ height: $('.read-more-text-content').height() }, 600).addClass('active');
     }
-;
-scrollToTopButton.onclick = function (e) {
-    e.preventDefault();
-    scrollToTop();
-}*/
+    $(this).toggleClass('active');
+});

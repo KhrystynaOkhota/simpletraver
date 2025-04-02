@@ -63,7 +63,12 @@
 
   }
 }
-
+.icon-ar-right:before {
+  content: "\e908";
+}
+.icon-download:before {
+  content: "\e90b";
+}
 .icon-message:before {
   content: "\e900";
 }

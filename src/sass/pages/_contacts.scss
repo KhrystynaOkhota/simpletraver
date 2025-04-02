@@ -33,9 +33,6 @@
     margin-bottom: 38px;
   }
 
-  & .btn-primary {
-    margin-top: 38px;
-  }
 
   &__bg {
     position: absolute;
@@ -187,8 +184,8 @@
 
       & a {
         &[href^="mailto:"] {
-           color: $accent-color;
-         }
+          color: $accent-color;
+        }
 
       }
     }
@@ -197,6 +194,7 @@
 
 .s-cta {
   padding: 92px 0 100px 0;
+  margin-bottom: 100px;
   @media (max-width: $breakpoint-md) {
     padding: 45px 0 52px 0;
   }

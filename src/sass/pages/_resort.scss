@@ -42,6 +42,7 @@
 
 .s-resort {
   &__heading {
+    margin-top: 40px;
     margin-bottom: 24px;
   }
 
@@ -54,6 +55,7 @@
       background: rgba(251, 247, 243, 1);
       padding: 48px 30px 40px 30px;
       border-radius: 30px;
+      margin: 50px 0;
 
       & a {
         &[href^="tel:"] {
@@ -65,14 +67,364 @@
     }
   }
 
-  & .object {
+  & .resort {
     &__price {
       margin-bottom: 20px;
+    }
+
+    &__gallery {
+      & .swiper-thumbs {
+        & .img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+
+          &__wrap {
+            position: relative;
+            overflow: hidden;
+          }
+        }
+
+        &-top {
+          margin-bottom: 20px;
+
+          & .img {
+
+            &__wrap {
+              padding-bottom: 53%;
+              border-radius: 50px;
+            }
+          }
+        }
+
+        &-bottom {
+          width: calc(100% - 120px);
+          margin: 0 auto;
+
+          & .img {
+            &__wrap {
+              padding-bottom: 82%;
+              border-radius: 10px;
+              border: 5px solid transparent;
+            }
+          }
+
+          & .swiper-slide {
+            &-thumb-active {
+
+
+              & .img {
+                &__wrap {
+                  border-color: rgba(29, 159, 150, 1);
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
 .s-resort-detail {
+  & .property {
+
+    padding: 20px 0 14px 0;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    gap: 22px 1px;
+
+    &__item {
+      /* width: calc(100% / 7);
+       min-width: calc(100% / 7);*/
+    }
+
+    &__icon {
+      height: 33px;
+      margin: 0 auto 14px auto;
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+  }
+
+  & .tabs {
+    &-entry {
+      padding-bottom: 85px;
+    }
+
+    &-menu {
+      background: #E0F8F5;
+      border: 1px solid transparent;
+      padding: 11px 24px;
+      border-radius: 90px;
+      min-width: 142px;
+      text-align: center;
+      @include transition(.5);
+
+      &:after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 7px 6.5px 0 6.5px;
+        border-color: $accent-color transparent transparent transparent;
+        transform: rotate(0deg);
+        position: absolute;
+        top: 100%;
+        left: calc(50% - 6.5px);
+        opacity: 0;
+        @include transition(.5);
+      }
+
+      &.active {
+        border-color: $accent-color;
+        background: transparent;
+        color: $accent-color;
+
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &__wrap {
+        display: flex;
+        gap: 16px;
+      }
+    }
+  }
+
+  & .resort-info {
+    &__name {
+      font-size: 40px;
+      margin-bottom: 9px;
+    }
+
+    & .accent-info {
+      margin-bottom: 40px;
+    }
+
+    & .download {
+      margin-top: 50px;
+    }
+  }
+
+
+  & .apartments {
+    &__wrap {
+      @media (max-width: $breakpoint-lg) {
+        width: calc(100% + 30px);
+        left: -15px;
+        position: relative;
+      }
+    }
+
+    &__gallery {
+      @media (min-width: $breakpoint-lg) {
+        top: -48px;
+        width: 120%;
+      }
+      position: relative;
+      z-index: 1;
+
+      & .gallery {
+        &__img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+
+          @media (min-width: $breakpoint-lg) {
+            border-radius: 50px;
+          }
+
+          &-wrap {
+            position: relative;
+            padding-bottom: 66%;
+          }
+        }
+      }
+    }
+
+    &__info {
+      position: relative;
+      z-index: 2;
+
+      padding: 18px 20px;
+      @media (min-width: $breakpoint-lg) {
+        border-radius: 30px;
+      }
+
+      & .heading {
+        margin-bottom: 5px;
+      }
+
+      & .description {
+        margin-bottom: 13px;
+      }
+
+      & .price {
+        font-size: 25px;
+
+        & span {
+          font-size: 17px;
+        }
+      }
+
+      & .details {
+        list-style: disc;
+        padding-left: 20px;
+        display: grid;
+        gap: 20px;
+
+        &-title {
+          font-size: 20px;
+          margin-bottom: 5px;
+        }
+
+        & li {
+          font-size: 17px;
+
+          & b {
+            font-weight: bold;
+          }
+        }
+      }
+
+
+      & .btn-more {
+        display: inline-block;
+        margin-top: 14px;
+        font-weight: 600;
+        font-size: 17px;
+        color: $accent-color;
+      }
+    }
+
+
+    &__item {
+      @media (min-width: $breakpoint-lg) {
+        padding: 50px 0 0 0;
+      }
+
+      &:nth-child(odd) {
+        @media (min-width: $breakpoint-lg) {
+          flex-direction: row-reverse;
+        }
+
+        & .apartments {
+          &__info {
+            background: rgba(224, 248, 245, 1);
+          }
+
+          &__gallery {
+            @media (min-width: $breakpoint-lg) {
+              left: -20%;
+            }
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        & .apartments {
+          &__info {
+            background: rgba(251, 247, 243, 1);
+          }
+
+          &__gallery {
+
+          }
+        }
+      }
+
+      &:not(&:last-child) {
+        margin-bottom: 20px;
+        @media (max-width: $breakpoint-lg) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+
+  }
+
+
+  & .services {
+    &__wrap {
+      gap: 30px;
+      display: grid;
+
+      &-heading {
+        margin: 30px 0;
+      }
+    }
+
+    &__item {
+      background: rgba(251, 247, 243, 1);
+      padding: 35px 20px;
+      border-radius: 30px;
+
+      &:nth-child(even) {
+        background: rgba(224, 248, 245, 1);
+      }
+    }
+
+    &__title {
+      position: relative;
+      margin-bottom: 20px;
+      font-family: 'Snellroundhand', serif;
+      font-size: 30px;
+      padding-left: 122px;
+      color: #1D9F96;
+      font-style: italic;
+      font-weight: bold;
+
+      &:before {
+        content: '';
+        width: 122px;
+        height: 1px;
+        background: #1D9F96;
+        position: absolute;
+        left: -20px;
+        top: 21px;
+      }
+    }
+
+    &__info {
+      gap: 20px;
+      display: grid;
+      list-style: disc;
+      padding-left: 20px;
+
+      & li {
+        &::marker {
+          color: $accent-color;
+        }
+      }
+    }
+
+
+  }
+
+  & .treatment {
+    &__heading {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    &__wrap {
+      & .download {
+        margin: 33px 0;
+      }
+    }
+  }
 
   & .infrastructure {
     &__wrap {
@@ -80,13 +432,14 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 85px 20px;
-      @media (max-width: $breakpoint-lg) {
+
+      @media (max-width: $breakpoint-md) {
         grid-template-columns: repeat(3, 1fr);
       }
-      @media (max-width: $breakpoint-md) {
+      @media (max-width: $breakpoint-sm) {
         grid-template-columns: repeat(2, 1fr);
       }
-      @media (max-width: $breakpoint-sm) {
+      @media (max-width: 360px) {
         grid-template-columns: repeat(1, 1fr);
       }
     }
@@ -124,21 +477,21 @@
     }
   }
 
-  & .gallery {
-    &__wrap {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      @media (max-width: $breakpoint-lg) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      @media (max-width: $breakpoint-md) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @media (max-width: $breakpoint-sm) {
-        grid-template-columns: repeat(1, 1fr);
-      }
+  & .gallery-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
     }
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
 
     &__item {
       padding-bottom: 76%;
@@ -157,9 +510,68 @@
     }
   }
 
+  & .reviews {
+    &__item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 20px;
+      padding: 30px 0 22px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
 
+    &__wrap {
+      margin-bottom: 100px;
+    }
+
+    &__form {
+      padding: 60px 0;
+
+      &:before {
+        content: '';
+        width: calc(100vw - 100px);
+        height: 100%;
+        background: #fbf7f3;
+        border-radius: 50px;
+        left: calc(50% - 50vw + 50px);
+        top: 0;
+        position: absolute;
+      }
+
+      & .form-control {
+        border-radius: 50px;
+        border: 1px solid rgba(178, 144, 124, 0.2);
+      }
+    }
+
+    &__icon {
+      width: 51%;
+      height: 51%;
+      object-fit: contain;
+      object-position: center;
+
+      &-wrap {
+        width: 110px;
+        height: 110px;
+        border-radius: 100%;
+        background: #FBF7F3;
+      }
+    }
+
+    &__author {
+      font-size: 20px;
+    }
+
+    &__date {
+      color: #AAAAAA;
+      font-size: 17px;
+      margin-left: 30px;
+    }
+
+    &__text {
+      margin-top: 2px
+    }
+  }
 }
-
 
 .s-faq {
   padding: 90px 0 100px 0;
@@ -188,6 +600,11 @@
       font-family: 'Poppins', sans-serif;
       color: $accent-color;
 
+      & i {
+        font-size: 16px;
+        padding-right: 14px;
+      }
+
       &:after {
         content: '';
         width: 100%;
@@ -213,4 +630,9 @@
       }
     }
   }
+}
+
+.read-more-text-wrapper {
+  height: 330px;
+  overflow: hidden
 }

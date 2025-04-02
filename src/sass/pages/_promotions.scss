@@ -1,9 +1,19 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.promotion {
+.events {
   &__item {
     background: rgba(251, 247, 243, 1);
+    border-radius: 10px;
+    overflow: hidden;
+
+    &.no-bg {
+      background: transparent;
+
+      & .promotion__img-wrap {
+        margin-bottom: 13px;
+      }
+    }
   }
 
   &__img {
@@ -39,7 +49,7 @@
   }
 }
 
-.s-promotions {
+.s-events {
   &__wrap {
     gap: 30px;
     display: grid;
@@ -69,8 +79,39 @@
   }
 }
 
-.s-recommended-prom {
+.s-recommended-events {
+  padding-bottom: 100px;
+
+  & .btn-transparent {
+    margin-top: 50px;
+  }
+
   & .heading {
     margin-bottom: 33px;
   }
+}
+
+.s-events-detail {
+  & .img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &__wrap {
+      padding-bottom: 50%;
+      margin-bottom: 24px;
+    }
+  }
+
+  & .date {
+    margin-bottom: 15px;
+    color: #AAAAAA;
+  }
+
+  padding-bottom: 40px;
+
 }

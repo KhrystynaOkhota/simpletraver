@@ -178,9 +178,26 @@
 
 */
 
+.s-text {
+  &.--bg {
+    padding: 50px 0;
+    position: relative;
+    &:before {
+      content: '';
+      width: calc(100% - 100px);
+      height: 100%;
+      background: #FBF7F3;
+      border-radius: 50px;
+      left: 50px;
+      top: 0;
+      position: absolute;
+    }
+  }
+
+}
 
 .s-download {
-  &__inner{
+  &__inner {
     padding: 50px 30px;
     background: rgba(251, 247, 243, 1);
     border-radius: 50px;
@@ -193,5 +210,27 @@
 
   & .description {
     margin-bottom: 31px;
+  }
+}
+.download{
+  padding: 50px 30px;
+  background: rgba(251, 247, 243, 1);
+  border-radius: 50px;
+  @media (max-width: $breakpoint-md) {
+    padding: 30px 20px 40px 20px;
+  }
+  & .heading {
+
+    margin-bottom: 18px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 15px;
+    }
+  }
+
+  & .description {
+    margin-bottom: 31px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 15px;
+    }
   }
 }

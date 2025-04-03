@@ -292,12 +292,17 @@ $('.preload__btn').on('click', function () {
 // =============================
 // ACCORDEON
 // =============================
-$(document).on('click', '.accordeon-title', function () {
+/*$(document).on('click', '.accordeon-title', function () {
     alert("rtyui");
     $(this).parent().siblings('.accordeon-item.active').toggleClass('active').find('.accordeon-content').slideToggle();
     $(this).parent().toggleClass('active').find('.accordeon-content').slideToggle();
-});
+});*/
 
+$(document).on('click', '.accordeon-title', function () {
+    var accordeon = $(this).closest('.accordeon');
+    accordeon.find('.accordeon-title.active').not(this).removeClass('active').next().slideUp();
+    $(this).toggleClass('active').next().slideToggle();
+});
 
 /* Scroll to Content */
 $(document).on("click", ".scroll-to-content", function () {

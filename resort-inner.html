@@ -315,22 +315,21 @@
         <div class="container">
             <div class="row m-row align-center">
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                    <div class="tabs-block">
-                        <div class="tabs-menu-wrapper  --relative">
 
-                            <div class="tabs-toggle active tabs-menu__wrap">
-                                <div class="tabs-menu text-regular active">Опис</div>
-                                <div class="tabs-menu text-regular"> Номери</div>
-                                <div class="tabs-menu text-regular">Ціни</div>
-                                <div class="tabs-menu text-regular">Акції</div>
-                                <div class="tabs-menu text-regular"> Лікування</div>
-                                <div class="tabs-menu text-regular">Інфаструктура</div>
-                                <div class="tabs-menu text-regular">Галерея</div>
-                                <div class="tabs-menu text-regular">Відгуки</div>
-                            </div>
+                    <div class="tab">
+                        <div class="tab__list">
+                            <div class="tab__item">Опис</div>
+                            <div class="tab__item">Номери</div>
+                            <div class="tab__item">Ціни</div>
+                            <div class="tab__item">Акції</div>
+                            <div class="tab__item">Лікування</div>
+                            <div class="tab__item">Інфаструктура</div>
+                            <div class="tab__item">Галерея</div>
+                            <div class="tab__item">Відгуки</div>
+
                         </div>
-                        <div>
-                            <div class="tabs-entry">
+                        <div class="tab__content">
+                            <div class="tab__content-item">
                                 <div class="resort-info ">
                                     <h3 class="resort-info__name text-bold">Санаторій «Лісова Пісня» м. Трускавець</h3>
                                     <div class="accent-info --relative h4"><b>«Лісова Пісня» Трускавець </b> відноситься
@@ -440,7 +439,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tabs-entry">
+                            <div class="tab__content-item">
                                 <div class="apartments__wrap ">
                                     <div class="apartments__item row">
                                         <div class="col-xl-9 col-lg-7 col-md-7 col-sm-16 col-xs-16">
@@ -867,89 +866,403 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tabs-entry">
-                                <table style="text-align: center;">
-                                    <tbody>
-                                    <tr>
-                                        <th>Категорія номера</th>
-                                        <th><p>Ціна, грн</p></th>
-                                        <th>Дод. місце</th>
-                                        <th>Основне місце для дітей від 10 років</th>
-                                        <th>Дод. місце для дітей від 10 років</th>
-                                        <th>Зал їдальні</th>
-                                    </tr>
-                                    <tr>
-                                        <td>2-місний 1-кімнатний «Напівлюкс»<br>3-й корпус</td>
-                                        <td>1815</td>
-                                        <td>&nbsp;</td>
-                                        <td>1510</td>
-                                        <td>1390</td>
-                                        <td>№2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2-місний 1-кімнатний «Напівлюкс покращений»*<br>3-й корпус</td>
-                                        <td>2185</td>
-                                        <td>2040</td>
-                                        <td>1820</td>
-                                        <td>1700</td>
-                                        <td>№2</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1-місний 1-кімнатний «Напівлюкс»<br>2-й та 3-й корпус</td>
-                                        <td>1925</td>
-                                        <td>&nbsp;-</td>
-                                        <td>&nbsp;-</td>
-                                        <td>-</td>
-                                        <td>Vip-зал</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1-місний 1-кімнатний «Напівлюкс покращений»*<br>3й та 5й корпус</td>
-                                        <td>2295</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>Vip-зал</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2-місний 2-кімнатний "Люкс"<br>2-й та 5-й корпус&nbsp;</td>
-                                        <td>1925</td>
-                                        <td>1710</td>
-                                        <td>1600</td>
-                                        <td>1425</td>
-                                        <td>Vip-зал</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1-місний 2-кімнатний "Люкс"<br>2–й та 5-й корпус</td>
-                                        <td>2200</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>Vip-зал</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2-місний 2-кімнатний "Люкс покращений"*<br>2-й та 5-й корпус</td>
-                                        <td>2295</td>
-                                        <td>2080</td>
-                                        <td>1910</td>
-                                        <td>1730</td>
-                                        <td>Vip-зал</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1-місний 2-кімнатний "Люкс покращений"*<br>2-й та 5-й корпус&nbsp;</td>
-                                        <td>2540</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td>Vip-зал</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                            <div class="tab__content-item">
+
+                                <div class="packages-services">
+
+                                </div>
+                                <div class="rates-accommodation">
+                                    <div class="heading">
+                                        Тарифи на проживання в санаторії на 2025 рік
+                                    </div>
+                                    <div class="description">Для перегляду ціни оберіть період який Вас цікавить.</div>
+
+
+                                    <div class="tab">
+                                        <div class="tab__list">
+                                            <div class="tab__item">01.02 - 01.06.2025</div>
+                                            <div class="tab__item">02.06 - 01.11.2025</div>
+                                            <div class="tab__item">01.02 - 01.06.2025</div>
+                                            <div class="tab__item">01.02 - 01.06.2025</div>
+                                        </div>
+                                        <div class="tab__content">
+                                            <div class="tab__content-item">
+                                                <table>
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Категорія номеру</th>
+                                                        <th>Осіб</th>
+                                                        <th>BB</th>
+                                                        <th>FB</th>
+                                                        <th>MED</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    <tr>
+                                                        <th>1-місний Single (4)</th>
+                                                        <th>1</th>
+                                                        <th>1 140 грн</th>
+                                                        <th>1 518 грн</th>
+                                                        <th>1 950 грн</th>
+                                                    </tr>
+
+
+                                                    <tr>
+                                                        <td rowspan="2">2-місний Стандарт (34)</td>
+                                                        <td>1</td>
+                                                        <td>1 645 грн</td>
+                                                        <td>1 980 грн</td>
+                                                        <td>2 475 грн</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>2 404 грн</td>
+                                                        <td>2 640 грн</td>
+                                                        <td>3 410 грн</td>
+                                                    </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+
+
+                                                Resources
+
+                                                <table>
+                                                    <tbody>
+                                                    <tr style="height: 1cm;">
+                                                        <td rowspan="2"
+                                                            style="border: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt; height: 1cm;">
+                                                            <p align="center" style="text-align: center;"><b>Категор</b><b>ія
+                                                                номер</b><b>у</b></p>
+                                                        </td>
+                                                        <td nowrap="nowrap" rowspan="2"
+                                                            style="border-top: 1pt solid black; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: none; background: #ccffff; padding: 0cm 4.25pt; height: 1cm;">
+                                                            <p align="center" style="text-align: center;"><b>Осіб</b>
+                                                            </p>
+                                                        </td>
+                                                        <td colspan="3"
+                                                            style="border-top: 1pt solid black; border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: none; background: #ccffff; padding: 0cm 4.25pt; height: 1cm;">
+                                                            <p align="center" style="text-align: center;"><b>01.02 -
+                                                                01.06</b></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="height: 1cm;">
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt; height: 1cm;">
+                                                            <p align="center" style="text-align: center;">
+                                                                <b>BB</b><b></b></p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt; height: 1cm;">
+                                                            <p align="center" style="text-align: center;">
+                                                                <b>FB</b><b></b></p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt; height: 1cm;">
+                                                            <p align="center" style="text-align: center;">
+                                                                <b>MED</b><b></b></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>1-місний Single (4)</p>
+                                                        </td>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1140</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1518</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1958</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2"
+                                                            style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>2-місний Стандарт (34)</p>
+                                                        </td>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1645</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1980</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2475</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2404</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2640</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3410</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2"
+                                                            style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>2-місний Покращений (73)</p>
+                                                        </td>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2464</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2475</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2838</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2910</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3135</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3894</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3"
+                                                            style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>2-кімнатний Люкс (12)</p>
+                                                        </td>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3355</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3575</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3960</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">4015</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">4675</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">5379</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">4807</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">5390</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">6160</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="3"
+                                                            style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>1-кімнатний VIP (8)</p>
+                                                        </td>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3685</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3960</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">4950</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">2</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">4400</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">4950</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">5940</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">3</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">5112</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">5940</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">7128</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>2-кімнатний VIP (2)</p>
+                                                        </td>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1-4</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">5445</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">6655</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">7986</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>Президентський (3)</p>
+                                                        </td>
+                                                        <td nowrap="nowrap"
+                                                            style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: white; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1-4</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">10626</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">10626</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">12210</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5"
+                                                            style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: #cccccc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;"><b>Додаткове
+                                                                місце</b></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"
+                                                            style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>дорослий / дитина від 12 років</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">-</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1199</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">1496</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2"
+                                                            style="border-right: 1pt solid black; border-bottom: 1pt solid black; border-left: 1pt solid black; border-top: none; background: white; padding: 0cm 4.25pt;">
+                                                            <p>діти від 6 до 12 років</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">-</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ccffff; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">550</p>
+                                                        </td>
+                                                        <td style="border-top: none; border-left: none; border-bottom: 1pt solid black; border-right: 1pt solid black; background: #ffffcc; padding: 0cm 4.25pt;">
+                                                            <p align="center" style="text-align: center;">-</p>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tab__content-item">
+                                                <p> The marks themselves took on the term and came to be closely
+                                                    associated with
+                                                    craftsmen's
+                                                    products. Through that association, the term eventually acquired its
+                                                    current
+                                                    meaning. </p>
+                                            </div>
+                                            <div class="tab__content-item">
+                                                <p> Branding and labeling have an ancient history. Branding probably
+                                                    began with the
+                                                    practice
+                                                    of
+                                                    branding livestock to deter theft. Images of the branding of cattle
+                                                    occur in
+                                                    ancient
+                                                    Egyptian tombs dating to around 2,700 BCE </p>
+                                            </div>
+                                            <div class="tab__content-item">
+                                                <p> Branding and labeling have an ancient history. Branding probably
+                                                    began with the
+                                                    practice
+                                                    of
+                                                    branding livestock to deter theft. Images of the branding of cattle
+                                                    occur in
+                                                    ancient
+                                                    Egyptian tombs dating to around 2,700 BCE </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
                             </div>
-                            <div class="tabs-entry">
-                                <div class="promotions__wrap">
+                            <div class="tab__content-item">
+                                <div class="promotions">
 
                                     <div class="promotions__item">
-                                        <h4 class="promotions__title decor">Акція на всі номери і тарифи</h4>
+                                        <h4 class="heading accent-info --relative h4"><b>Акція на всі номери і тарифи</b></h4>
                                         <div class="editor-style">
                                             <h4>Додатковий день - безкоштовно, при бронюванні більше 10 днів</h4>
                                             <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
@@ -982,7 +1295,7 @@
                                         </div>
                                     </div>
                                     <div class="promotions__item">
-                                        <h4 class="promotions__title decor">Акція на всі номери і тарифи</h4>
+                                        <h4 class="heading accent-info --relative h4">Акція на всі номери і тарифи</h4>
                                         <div class="editor-style">
                                             <h4>Додатковий день - безкоштовно, при бронюванні більше 10 днів</h4>
                                             <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
@@ -1014,141 +1327,81 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="promotions__item">
-                                        <h4 class="promotions__title decor">Акція на всі номери і тарифи</h4>
-                                        <div class="editor-style">
-                                            <h4>Додатковий день - безкоштовно, при бронюванні більше 10 днів</h4>
-                                            <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
-                                                Дніпро-Трускавець, або можна доїхати до станції Львів чи Стрий, а потім
-                                                автобусом до міста Трускавець. А також ми зустрічаємо у Трускавці на
-                                                автостанції чи автовокзалі та довозимо гостей до санаторію.</p>
-                                            <ul>
-                                                <li>
-                                                    Консультація терапевта, уролога, гінеколога, ендокринолога,
-                                                    педіатра,
-                                                    косметолога;
-                                                </li>
-                                                <li>
-                                                    Електрокардіографія (ЕКГ);
-                                                </li>
-                                                <li>
-                                                    Комплексне ультразвукове дослідження (УЗД);
-                                                </li>
-                                                <li>Загальний аналіз крові і сечі;</li>
-                                                <li>Консультація кардіолога;</li>
-                                                <li>Комплексне лікування дітей до 6-ти років;</li>
-                                                <li>Глюкоза крові;</li>
-                                                <li>Глікемічний профіль;</li>
-                                                <li>Прессомассаж;</li>
-                                                <li>Масаж загальний медичний, спини, шийно-комірцевої зони,
-                                                    попереково-крижового
-                                                    відділу, нижніх кінцівок, дитячий.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="promotions__item">
-                                        <h4 class="promotions__title decor">Акція на всі номери і тарифи</h4>
-                                        <div class="editor-style">
-                                            <h4>Додатковий день - безкоштовно, при бронюванні більше 10 днів</h4>
-                                            <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
-                                                Дніпро-Трускавець, або можна доїхати до станції Львів чи Стрий, а потім
-                                                автобусом до міста Трускавець. А також ми зустрічаємо у Трускавці на
-                                                автостанції чи автовокзалі та довозимо гостей до санаторію.</p>
-                                            <ul>
-                                                <li>
-                                                    Консультація терапевта, уролога, гінеколога, ендокринолога,
-                                                    педіатра,
-                                                    косметолога;
-                                                </li>
-                                                <li>
-                                                    Електрокардіографія (ЕКГ);
-                                                </li>
-                                                <li>
-                                                    Комплексне ультразвукове дослідження (УЗД);
-                                                </li>
-                                                <li>Загальний аналіз крові і сечі;</li>
-                                                <li>Консультація кардіолога;</li>
-                                                <li>Комплексне лікування дітей до 6-ти років;</li>
-                                                <li>Глюкоза крові;</li>
-                                                <li>Глікемічний профіль;</li>
-                                                <li>Прессомассаж;</li>
-                                                <li>Масаж загальний медичний, спини, шийно-комірцевої зони,
-                                                    попереково-крижового
-                                                    відділу, нижніх кінцівок, дитячий.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="promotions__item">
-                                        <h4 class="promotions__title decor">Акція на всі номери і тарифи</h4>
-                                        <div class="editor-style">
-                                            <h4>Додатковий день - безкоштовно, при бронюванні більше 10 днів</h4>
-                                            <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
-                                                Дніпро-Трускавець, або можна доїхати до станції Львів чи Стрий, а потім
-                                                автобусом до міста Трускавець. А також ми зустрічаємо у Трускавці на
-                                                автостанції чи автовокзалі та довозимо гостей до санаторію.</p>
-                                            <ul>
-                                                <li>
-                                                    Консультація терапевта, уролога, гінеколога, ендокринолога,
-                                                    педіатра,
-                                                    косметолога;
-                                                </li>
-                                                <li>
-                                                    Електрокардіографія (ЕКГ);
-                                                </li>
-                                                <li>
-                                                    Комплексне ультразвукове дослідження (УЗД);
-                                                </li>
-                                                <li>Загальний аналіз крові і сечі;</li>
-                                                <li>Консультація кардіолога;</li>
-                                                <li>Комплексне лікування дітей до 6-ти років;</li>
-                                                <li>Глюкоза крові;</li>
-                                                <li>Глікемічний профіль;</li>
-                                                <li>Прессомассаж;</li>
-                                                <li>Масаж загальний медичний, спини, шийно-комірцевої зони,
-                                                    попереково-крижового
-                                                    відділу, нижніх кінцівок, дитячий.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="promotions__item">
-                                        <h4 class="promotions__title decor">Акція на всі номери і тарифи</h4>
-                                        <div class="editor-style">
-                                            <h4>Додатковий день - безкоштовно, при бронюванні більше 10 днів</h4>
-                                            <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
-                                                Дніпро-Трускавець, або можна доїхати до станції Львів чи Стрий, а потім
-                                                автобусом до міста Трускавець. А також ми зустрічаємо у Трускавці на
-                                                автостанції чи автовокзалі та довозимо гостей до санаторію.</p>
-                                            <ul>
-                                                <li>
-                                                    Консультація терапевта, уролога, гінеколога, ендокринолога,
-                                                    педіатра,
-                                                    косметолога;
-                                                </li>
-                                                <li>
-                                                    Електрокардіографія (ЕКГ);
-                                                </li>
-                                                <li>
-                                                    Комплексне ультразвукове дослідження (УЗД);
-                                                </li>
-                                                <li>Загальний аналіз крові і сечі;</li>
-                                                <li>Консультація кардіолога;</li>
-                                                <li>Комплексне лікування дітей до 6-ти років;</li>
-                                                <li>Глюкоза крові;</li>
-                                                <li>Глікемічний профіль;</li>
-                                                <li>Прессомассаж;</li>
-                                                <li>Масаж загальний медичний, спини, шийно-комірцевої зони,
-                                                    попереково-крижового
-                                                    відділу, нижніх кінцівок, дитячий.
-                                                </li>
-                                            </ul>
-                                        </div>
+                                   <div class="promotions__item">
+                                    <h4 class="heading accent-info --relative h4"><b>Акція на всі номери і тарифи</b></h4>
+                                    <div class="editor-style">
+                                        <h4>Додатковий день - безкоштовно, при бронюванні більше 10 днів</h4>
+                                        <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
+                                            Дніпро-Трускавець, або можна доїхати до станції Львів чи Стрий, а потім
+                                            автобусом до міста Трускавець. А також ми зустрічаємо у Трускавці на
+                                            автостанції чи автовокзалі та довозимо гостей до санаторію.</p>
+                                        <ul>
+                                            <li>
+                                                Консультація терапевта, уролога, гінеколога, ендокринолога,
+                                                педіатра,
+                                                косметолога;
+                                            </li>
+                                            <li>
+                                                Електрокардіографія (ЕКГ);
+                                            </li>
+                                            <li>
+                                                Комплексне ультразвукове дослідження (УЗД);
+                                            </li>
+                                            <li>Загальний аналіз крові і сечі;</li>
+                                            <li>Консультація кардіолога;</li>
+                                            <li>Комплексне лікування дітей до 6-ти років;</li>
+                                            <li>Глюкоза крові;</li>
+                                            <li>Глікемічний профіль;</li>
+                                            <li>Прессомассаж;</li>
+                                            <li>Масаж загальний медичний, спини, шийно-комірцевої зони,
+                                                попереково-крижового
+                                                відділу, нижніх кінцівок, дитячий.
+                                            </li>
+                                        </ul>
+
+                                        <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
+                                            Дніпро-Трускавець, або можна доїхати до станції Львів чи Стрий, а потім
+                                            автобусом до міста Трускавець. А також ми зустрічаємо у Трускавці на
+                                            автостанції чи автовокзалі та довозимо гостей до санаторію.</p>
                                     </div>
                                 </div>
+                                <div class="promotions__item">
+                                <h4 class="heading accent-info --relative h4"><b>Акція на всі номери і тарифи</b></h4>
+                                <div class="editor-style">
+                                    <h4>Додатковий день - безкоштовно, при бронюванні більше 10 днів</h4>
+                                    <p>До санаторію Лісова Пісня можна доїхати: поїздом Київ-Трускавець чи
+                                        Дніпро-Трускавець, або можна доїхати до станції Львів чи Стрий, а потім
+                                        автобусом до міста Трускавець. А також ми зустрічаємо у Трускавці на
+                                        автостанції чи автовокзалі та довозимо гостей до санаторію.</p>
+                                    <ul>
+                                        <li>
+                                            Консультація терапевта, уролога, гінеколога, ендокринолога,
+                                            педіатра,
+                                            косметолога;
+                                        </li>
+                                        <li>
+                                            Електрокардіографія (ЕКГ);
+                                        </li>
+                                        <li>
+                                            Комплексне ультразвукове дослідження (УЗД);
+                                        </li>
+                                        <li>Загальний аналіз крові і сечі;</li>
+                                        <li>Консультація кардіолога;</li>
+                                        <li>Комплексне лікування дітей до 6-ти років;</li>
+                                        <li>Глюкоза крові;</li>
+                                        <li>Глікемічний профіль;</li>
+                                        <li>Прессомассаж;</li>
+                                        <li>Масаж загальний медичний, спини, шийно-комірцевої зони,
+                                            попереково-крижового
+                                            відділу, нижніх кінцівок, дитячий.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="tabs-entry">
+                                </div>
+                            </div>
+
+                            <div class="tab__content-item">
                                 <div class="treatment__wrap">
                                     <h3 class="treatment__heading text-bold">Лікування в санаторії Лісова Пісня
                                         Трускавець</h3>
@@ -1341,7 +1594,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tabs-entry">
+
+                            <div class="tab__content-item">
                                 <div class="infrastructure__wrap">
                                     <div class="infrastructure__item text-center">
                                         <img src="assets/img/in-1.svg" alt="" class="infrastructure__img">
@@ -1377,7 +1631,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tabs-entry">
+
+                            <div class="tab__content-item">
                                 <div class="gallery-grid">
                                     <div class="gallery-grid__item">
                                         <img src="assets/img/hero.png" alt="">
@@ -1398,9 +1653,9 @@
                                         <img src="assets/img/introduce.png" alt="">
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="tabs-entry">
+
+                            <div class="tab__content-item">
                                 <div class="reviews__wrap">
                                     <div class="reviews__item">
                                         <div class="reviews__icon-wrap d-flex align-middle align-center">
@@ -1447,8 +1702,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="reviews__form --relative ">
 
                                     <div class="row align-middle align-justify">
@@ -1500,7 +1753,7 @@
                     <h3 class="heading heading-font text-bold h2 mb-33">Часті питання</h3>
                 </div>
             </div>
-            <div class="row m-row tabs-block">
+            <div class="row m-row tabs-block d-none d-md-flex">
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-16 col-xs-16 column">
 
                     <div class="tabs-menu-wrapper  --relative">
@@ -1655,6 +1908,73 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row d-block d-md-none">
+                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
+                    <div class="accordeon">
+                        <div class="accordeon-entry">
+                            <div class="accordeon-title d-flex align-left align-middle">
+                                <i class="icon-ar-right"></i><span>Що лікують на курорті Трускавці?</span>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="accordeon-toggle__inner">
+                                    <div class="cms-content">
+                                        <p>
+                                            <b> На відпочинок до Трускавця можна дістатися двома поїздами:</b> N° 49 Київ -
+                                            Трускавець
+                                            (Кобзар), який о 20:12 відправляється з Києва і 8:07 прибуває до Трускавця і N° 41
+                                            Дніпропетровськ - Трускавець, який о 14:26 відправляється з Дніпропетровська та
+                                            11:03
+                                            прибуває до Трускавця.
+                                        </p>
+                                        <p>
+                                            <b>Також можна в Трускавець дістатися автобусом:</b> практично з кожного міста до
+                                            Трускавця
+                                            направляються автобуси. А ще чотири рази в день зі Львова
+                                        </p>
+                                        <ul>
+                                            <li>test</li>
+                                            <li>test</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordeon-entry">
+                            <div class="accordeon-title d-flex align-left align-middle">
+                                <i class="icon-ar-right"></i><span>Яка мінімальна ціна за
+                                путівку на курорт Трускавець?</span>
+                            </div>
+                            <div class="accordeon-toggle" style="display: none;">
+                                <div class="accordeon-toggle__inner">
+                                <div class="cms-content">
+                                    <p>
+                                        <b> На відпочинок до Трускавця можна дістатися двома поїздами:</b> N° 49 Київ -
+                                        Трускавець
+                                        (Кобзар), який о 20:12 відправляється з Києва і 8:07 прибуває до Трускавця і N° 41
+                                        Дніпропетровськ - Трускавець, який о 14:26 відправляється з Дніпропетровська та
+                                        11:03
+                                        прибуває до Трускавця.
+                                    </p>
+                                    <p>
+                                        <b>Також можна в Трускавець дістатися автобусом:</b> практично з кожного міста до
+                                        Трускавця
+                                        направляються автобуси. А ще чотири рази в день зі Львова
+                                    </p>
+                                    <ul>
+                                        <li>test</li>
+                                        <li>test</li>
+                                    </ul>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1662,7 +1982,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
-                    <h3 class="heading heading-font text-bold h2 ьи-33">Схожі санаторії</h3>
+                    <h3 class="heading heading-font text-bold h2 mb-33">Схожі санаторії</h3>
                     <div class="swiper-container"
                          data-options='{"loop":true,"slidesPerView": 1, "spaceBetween": 0,"centeredSlides": false,
                          "breakpoints": {
@@ -2005,7 +2325,6 @@
         </div>
         <div class="space-s"></div>
     </section>
-
 </main>
 
 <div class="popup-wrapper">
@@ -2264,5 +2583,43 @@
     });
 </script>
 
+
+<script>
+    const tabs = document.querySelectorAll(".tab");
+
+    function tabify(tab) {
+        const tabList = tab.querySelector(".tab__list");
+
+        if (tabList) {
+            const tabItems = [...tabList.children];
+            const tabContent = tab.querySelector(".tab__content");
+            const tabContentItems = [...tabContent.children];
+            let tabIndex = 0;
+
+            tabIndex = tabItems.findIndex((item, index) => {
+                return [...item.classList].indexOf("is--active") > -1;
+            });
+
+            tabIndex > -1 ? (tabIndex = tabIndex) : (tabIndex = 0);
+
+            function setTab(index) {
+                tabItems.forEach((x, index) => x.classList.remove("is--active"));
+                tabContentItems.forEach((x, index) => x.classList.remove("is--active"));
+
+                tabItems[index].classList.add("is--active");
+                tabContentItems[index].classList.add("is--active");
+            }
+
+            tabItems.forEach((x, index) =>
+                x.addEventListener("click", () => setTab(index))
+            );
+            setTab(tabIndex);
+            tab.querySelectorAll(".tab").forEach((tabContent) => tabify(tabContent));
+        }
+    }
+
+    tabs.forEach(tabify);
+
+</script>
 </body>
 </html>

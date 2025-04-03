@@ -63,6 +63,18 @@
 
   }
 }
+
+
+
+
+
+.icon-time:before {
+  content: "\e90a";
+}
+.icon-search:before {
+  content: "\e909";
+
+}
 .icon-ar-right:before {
   content: "\e908";
 }
@@ -116,7 +128,7 @@
 }
 
 .h1 {
-  @include fontSize(48, 60);
+  @include fontSize(30, 60);
 }
 
 .h2 {

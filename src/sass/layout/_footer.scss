@@ -8,14 +8,17 @@
   position: relative;
   @media (max-width: $breakpoint-md) {
     padding: 33px 0 17px 0;
+    background: #115764;
   }
 
 
-  &__bg{
+  &__bg {
     position: absolute;
-    top:0;
-    width:100%;
+    top: 0;
+    width: 100%;
+    background: #fff;
   }
+
   &__bottom {
     @media (max-width: $breakpoint-md) {
       margin-top: 25px;

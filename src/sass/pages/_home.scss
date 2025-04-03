@@ -4,9 +4,16 @@
 .s-hero {
   position: relative;
   height: 100vh;
+  @media (max-width: $breakpoint-lg) {
+    height: auto;
+  }
 
   & .decor-line {
     margin: 59px auto 48px auto;
+    @media (max-width: $breakpoint-md) {
+      margin: 17px auto;
+      height: 50px;
+    }
   }
 
   &__bg {
@@ -15,23 +22,109 @@
     left: 0;
     height: 100%;
     width: 100%;
+    background: rgba(217, 217, 217, 1);
 
     & img {
       height: 100%;
       width: 100%;
       object-fit: cover;
-
+      opacity: 0.8;
     }
   }
 
   &__content {
     padding-top: 242px;
+    @media (max-width: $breakpoint-lg) {
+
+      padding: 125px 0 102px 0;
+    }
 
     & .description {
       font-size: 30px;
       margin-bottom: 24px;
       color: $white-color;
+      @media (max-width: $breakpoint-md) {
+        font-size: 20px;
+        margin-bottom: 19px;
+      }
     }
 
+  }
+
+  .search-form {
+    max-width: 75%;
+    margin: 0 auto;
+    background: $white-color;
+    border-radius: 90px;
+    border: 15px solid rgba(0, 0, 0, 0.4);
+    @media (max-width: $breakpoint-md) {
+      border-width: 10px;
+      max-width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: transparent;
+      padding: 20px 135px 20px 15px;
+      font-size: 17px;
+      color: rgba(178, 144, 124, 1);
+      @media (max-width: $breakpoint-md) {
+        padding: 15px 50px 15px 15px;
+      }
+
+      &::-webkit-input-placeholder {
+        font-size: 17px;
+        color: rgba(178, 144, 124, 1);
+
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+
+      &::-moz-placeholder {
+        font-size: 17px;
+        color: rgba(178, 144, 124, 1);
+
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+
+      &:-ms-input-placeholder {
+        font-size: 17px;
+        color: rgba(178, 144, 124, 1);
+
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+
+    }
+
+    & .btn-search {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      outline: none;
+      cursor: pointer;
+      @media (max-width: $breakpoint-md) {
+        right: 0;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+      }
+
+      & i {
+        @media (min-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+
+      & span {
+        @media (max-width: $breakpoint-md) {
+          display: none;
+        }
+      }
+    }
   }
 }

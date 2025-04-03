@@ -226,6 +226,9 @@
       display: none;
       @media (max-width: $breakpoint-md) {
         display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
       }
 
       &.active {
@@ -265,7 +268,7 @@
       height: calc(100vh - 50px);
       background-color: $accent-color;
       position: fixed;
-      top: 50px;
+      top: 120px;
       transition: all 1.2s ease;
       z-index: 2;
       width: 100%;

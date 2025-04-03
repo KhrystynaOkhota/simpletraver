@@ -37,6 +37,37 @@
   }
 }
 
+.s-article-banner {
+  margin-bottom: 23px;
+  .kama_breadcrumbs {
+    padding: 24px 0 12px 0;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+
+    a {
+      color: #FDD66D;
+    }
+
+    & .kb_sep i {
+      background: #FDD66D;
+    }
+
+    & .kb_title {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  & .content {
+    padding: 250px 0 230px 0;
+
+    & .title {
+      color: rgba(255, 255, 255, 1);
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+}
+
 .s-blog {
   padding-top: 40px;
 

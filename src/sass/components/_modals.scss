@@ -7,31 +7,29 @@
 /*------------------------------------------*/
 .popup {
   &-form {
-    &__heading, &__description {
-
-    }
-
     &__heading {
-      @include fontSize(24, 40);
-      margin-bottom: 18px;
-      color:rgba(180, 102, 80, 1);
+      @include fontSize(35, 40);
+      margin-bottom: 15px;
+      color: rgba(49, 58, 87, 1);
     }
-
 
     & .btn-primary {
+      width: 100%;
+      max-width: 304px;
+    }
+
+    & .form-control {
+      margin-bottom: 20px;
+
+      &__input, &__textarea {
+        border: 1px solid rgba(178, 144, 124, 0.2);
+        padding: 12px 20px 10px 20px;
+        border-radius: 30px;
+      }
 
     }
   }
 
-  &-align {
-    position: relative;
-    z-index: 1;
-
-    background: #E8F4D8;
-    @media (min-width: $breakpoint-md) {
-      padding: 50px;
-    }
-  }
 
   &-wrapper {
     position: fixed;
@@ -69,74 +67,45 @@
       transition: all .3s ease-out;
       opacity: 0;
     }
+
+    & .btn-close {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 27px;
+      right: 28px;
+      background: $accent-color;
+      cursor: pointer;
+
+      & i {
+        font-size: 22px;
+        color: rgba(49, 58, 87, 1);
+        @include transition(.4);
+      }
+
+      &:hover {
+        & i {
+          color: $accent-color;
+        }
+      }
+    }
   }
 
   &-container {
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    max-width: 780px;
+    max-width: 950px;
     margin: auto;
     position: relative;
-    background: rgba(249, 244, 238, 1);
-    padding: 40px;
-    &__with-image {
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      @media (max-width: $breakpoint-md) {
-        -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-      }
-
-      & > .image__wrap {
-        height: 100%;
-        padding-bottom: 82.7%;
-      }
-
-      &.left-image {
-        @media (min-width: $breakpoint-md) {
-          -ms-grid-columns: 1fr 1.3fr;
-          grid-template-columns: 1fr 1.3fr;
-          min-height: 452px;
-        }
-
-      }
-    }
+    border-radius: 50px;
+    background: $white-color;
+    padding: 33px 81px 43px 81px;
 
     &.size-1 {
-      max-width: 55rem;
+      max-width: 630px;
     }
 
-    &.size-2 {
-      max-width: 28.25rem;
-    }
-
-    &.size-3 {
-      max-width: 36.875rem;
-    }
-
-    &.size-4 {
-      max-width: 27.563rem;
-      padding: 34px 77px 34px 34px;
-      -webkit-border-radius: 28px;
-      -moz-border-radius: 28px;
-      border-radius: 28px;
-
-      @media (max-width: $breakpoint-md) {
-        padding: 40px 16px;
-        max-width: 330px;
-        max-height: 80%;
-        overflow: auto;
-        -webkit-border-radius: 12px;
-        -moz-border-radius: 12px;
-        border-radius: 12px;
-      }
-    }
 
     @media (max-width: $breakpoint-md) {
       border-radius: 12px;

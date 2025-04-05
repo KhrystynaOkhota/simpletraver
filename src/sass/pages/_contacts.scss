@@ -3,7 +3,7 @@
 
 .s-contacts {
   &:not(.--bg) {
-    padding: 40px 0 100px 0;
+    padding: 0 0 100px 0;
   }
 
   &.--bg {
@@ -145,7 +145,7 @@
       position: relative;
       overflow: hidden;
       height: 100%;
-      width: 130%;
+      width: calc(43vw - 100px);
       @media (max-width: $breakpoint-md) {
         height: 350px;
         border: none;

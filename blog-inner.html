@@ -241,8 +241,6 @@
                             </blockquote>
 
 
-
-
                             <h3>Як дістатися в Косино</h3>
                             <p>Курортний санаторний комплекс, в першу чергу, орієнтований на відпочинок
                                 сімейних пар з дітьми різного віку. На відміну від звичайних готелів, Лісова
@@ -261,7 +259,35 @@
     </section>
 
     <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
+                    <div class="share d-flex align-left align-middle">
+                        <div class="share__title">
+                            <b>Поділитись у соцмережах:</b>
+                        </div>
+                        <ul class="social__list d-flex align-middle">
+                            <li class="social__item">
+                                <a href="" class="social__link d-flex align-center align-middle">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a href="" class="social__link d-flex align-center align-middle">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="social__item ">
+                                <a href="" class="social__link d-flex align-center align-middle">
+                                    <i class="icon-telegram"></i>
+                                </a>
+                            </li>
 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="s-similar-articles  swiper-entry">
         <div class="container">
@@ -382,61 +408,6 @@
 
 </main>
 
-<div class="popup-wrapper">
-    <div class="bg-layer"></div>
-
-    <div class="popup-content cta" data-rel="consultation">
-        <div class="layer-close"></div>
-        <div class="popup-container ">
-            <div class="btn-close d-flex align-middle align-center"><img src="assets/img/close.svg" alt="close icon">
-            </div>
-
-            <div class="popup-form text-center">
-                <h4 class="popup-form__heading heading-font text-bold">Форма обратной связи</h4>
-                <form>
-                    <div class="row m-row">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 column">
-                            <div class="form-control">
-                                <input class="form-control__input" type="text" name="" value=""
-                                       placeholder="Ім’я "
-                                       title="">
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 column">
-                            <div class="form-control">
-                                <input class="form-control__input" type="tel" name="" value=""
-                                       placeholder="+(0) _ _ _  _ _ _  _ _ _"
-                                       title="">
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 column">
-                            <div class="form-control">
-                                <input class="form-control__input" type="email" name="" value=""
-                                       placeholder="Ваш email"
-                                       title="">
-                                <i class="icon-user"></i>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row m-row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 column">
-                            <div class="form-control">
-                                    <textarea id="message" class="form-control__textarea" name="message"
-                                              placeholder="Текст"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 column">
-                            <input type="submit" value="отправить" class="btn btn-primary">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-</div>
-
 <footer class="footer">
     <div class="footer__bg ">
         <img class="bg" src="assets/img/footer-bg.png" alt="image">
@@ -556,37 +527,43 @@
 <script src="assets/js/jquery.sumoselect.min.js"></script>
 <script src="assets/js/js_app.min.js"></script>
 
-
 <script>
-    jQuery(function ($) {
-        const obsCounter = new IntersectionObserver(function (entries, observer) {
-            entries.forEach((entry) => {
-                    if (!entry.isIntersecting)
-                        return;
-                    entry.target.classList.add("|", "animated");
-                    $(entry.target).find(".number__heading").each(function () {
-                        $(this).prop("Counter", 0).animate({
-                            Counter: $(this).text(),
-                        }, {
-                            duration: 1500,
-                            easing: "swing",
-                            step: function (now) {
-                                $(this).text(Math.ceil(now));
-                            },
-                        });
+    //tabs
+    var tabsFinish = 0;
+    $(document).on('click', '.tabs-menu', function () {
+        if ($(this).hasClass('active') || tabsFinish)
+            return false;
+        tabsFinish = 1;
+        var tabsWrapper = $(this).closest('.tabs-block')
+            , tabsMenu = tabsWrapper.find('.tabs-menu')
+            , tabsItem = tabsWrapper.find('.tabs-entry')
+            , index = tabsMenu.index(this)
+            , thist = $(this);
+        tabsWrapper.find('.tabs-title').text($(this).text()).removeClass('active');
+        tabsItem.filter(':visible').fadeOut(function () {
+            tabsItem.eq(index).css({
+                'display': 'block',
+                'opacity': '0'
+            });
+
+            tabsItem.eq(index).animate({
+                'opacity': '1'
+            }, function () {
+                tabsFinish = 0;
+                if (thist.hasClass('scroll-top')) {
+                    $('body, html').animate({
+                        'scrollTop': $('.tabs-block').offset().top - 100
                     });
-                    observer.unobserve(entry.target);
                 }
-            );
+            });
         });
-
-        document.querySelectorAll(".number-wrapp").forEach((block) => {
-            obsCounter.observe(block);
-        });
-
+        tabsMenu.removeClass('active');
+        $(this).addClass('active');
     });
 
-
+    $(document).on('click', '.tabs-title', function () {
+        $(this).toggleClass('active');
+    });
 </script>
 
 </body>

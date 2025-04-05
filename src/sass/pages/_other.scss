@@ -85,24 +85,117 @@
 
 }
 
-.content-error, .content-thanks {
-  & img {
+.s-error, .s-thanks {
+  position: relative;
+  height: 100vh;
+  & .logo__wrap {
+    object-fit: contain;
     margin: 0 auto;
+    display: block;
+    @media (max-width: $breakpoint-md) {
+      width: 180px;
+      height: 70px;
+    }
+  }
+  & .content {
+    position: absolute;
+    z-index: 3;
+    bottom: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    @media (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+
+    & .heading, & .description {
+      color: $white-color;
+    }
+  }
+  & .bg {
+    position: absolute;
+    top: 0;
+    lefT: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+
+.s-thanks {
+
+  padding-top: 86px;
+
+  & .logo__wrap {
+    width: 340px;
+    height: 133px;
   }
 
-  & .heading {
-    @include fontSize(32, 64);
+  & .bg {
+    position: absolute;
+    top: 0;
+    lefT: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
   }
 
-  & .description {
-    @include fontSize(20, 32);
-    max-width: 700px;
-    margin: 0 auto;
-    color: #fff;
-    margin-top: 6px;
+  & .content {
+
+
+    & .heading {
+      @include fontSize(45, 120);
+      margin-bottom: 43px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 19px;
+      }
+    }
+
+    & .description {
+      @include fontSize(20, 30);
+      margin-bottom: 45px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    & .btn-primary {
+
+    }
+  }
+}
+
+.s-error {
+padding-top: 44px;
+
+  & .logo__wrap {
+    width: 255px;
+    height: 100px;
+
   }
 
-  & .btn {
-    margin-top: 30px;
+  & .content {
+    & .heading {
+      @include fontSize(45, 70);
+      margin-bottom: 30px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 15px;
+      }
+
+    }
+
+    & .description {
+      @include fontSize(20, 30);
+      margin-bottom: 45px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    & .btn-primary {
+
+    }
   }
 }

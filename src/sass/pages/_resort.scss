@@ -10,6 +10,20 @@
     }
   }
 
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &-wrap {
+      position: relative;
+      padding-bottom: 62%;
+    }
+  }
+
   &__info {
     padding: 12px;
 
@@ -42,8 +56,10 @@
 
 .s-resort {
   &__heading {
-
     margin-bottom: 24px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 20px;
+    }
   }
 
   & .btn__wrap {
@@ -56,6 +72,12 @@
       padding: 48px 30px 40px 30px;
       border-radius: 30px;
       margin: 50px 0;
+      @media (max-width: $breakpoint-md) {
+        margin: 30px 0;
+        padding: 23px 18px;
+        gap: 12px;
+        justify-content: center;
+      }
 
       & a {
         &[href^="tel:"] {
@@ -65,14 +87,67 @@
 
       }
     }
+
+    &__item {
+      @media (max-width: $breakpoint-md) {
+
+      }
+
+      &.phone {
+        @media (max-width: $breakpoint-md) {
+          width: 100%;
+          & a {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+
+      &.map {
+        & a {
+          color: $accent-color;
+        }
+      }
+
+      &.location {
+        position: relative;
+
+        i {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          &:before {
+            font-size: 24px;
+            color: $accent-color;
+          }
+        }
+
+        & .contact__text {
+          padding-left: 34px;
+        }
+      }
+    }
   }
 
   & .resort {
     &__price {
       margin-bottom: 20px;
+      font-size: 17px;
+
+      & span {
+        font-size: 30px;
+        font-weight: bold;
+      }
     }
 
     &__gallery {
+      margin-bottom: 38px;
+      @media (max-width: $breakpoint-md) {
+        margin-bottom: 19px;
+      }
+
       & .swiper-thumbs {
         & .img {
           position: absolute;
@@ -90,12 +165,20 @@
 
         &-top {
           margin-bottom: 20px;
+          @media (max-width: $breakpoint-md) {
+            margin-bottom: 10px;
+            width: calc(100% + 30px);
+            left: -15px;
+          }
 
           & .img {
 
             &__wrap {
               padding-bottom: 53%;
               border-radius: 50px;
+              @media (max-width: $breakpoint-md) {
+                border-radius: 0;
+              }
             }
           }
         }
@@ -109,12 +192,14 @@
               padding-bottom: 82%;
               border-radius: 10px;
               border: 5px solid transparent;
+              @media (max-width: $breakpoint-md) {
+                border-width: 3px;
+              }
             }
           }
 
           & .swiper-slide {
             &-thumb-active {
-
 
               & .img {
                 &__wrap {
@@ -123,6 +208,85 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  & .swiper {
+    &-button-prev, &-button-next {
+      width: 38px;
+      height: 38px;
+      background: transparent;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      & img {
+        width: 19px;
+        display: none;
+      }
+
+      & i {
+        &:after {
+          content: '';
+          position: relative;
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          border-left: 3px solid #B2907C;
+          border-bottom: 3px solid #B2907C;
+
+          -webkit-transition: all .5s ease-out;
+          -moz-transition: all .5s ease-out;
+          -o-transition: all .5s ease-out;
+          transition: all .5s ease-out;
+          @media (max-width: $breakpoint-md) {
+            border-left: 3px solid $white-color;
+            border-bottom: 3px solid $white-color;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      @media (max-width: $breakpoint-md) {
+        width: 45px;
+        height: 45px;
+        background: rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    &-button-prev {
+      left: 0;
+      @media (max-width: $breakpoint-md) {
+        left: 15px;
+      }
+
+      & i {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        @media (max-width: $breakpoint-md) {
+          left: 3px;
+          position: relative;
+        }
+      }
+    }
+
+    &-button-next {
+      right: 0;
+      @media (max-width: $breakpoint-md) {
+        right: 15px;
+      }
+
+      & i {
+        -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        @media (max-width: $breakpoint-md) {
+          left: -3px;
+          position: relative;
         }
       }
     }
@@ -543,13 +707,19 @@
   }
 
   & .reviews {
+    margin-bottom: 100px;
+
     &__item {
       display: grid;
       grid-template-columns: 110px 1fr;
       gap: 20px;
       padding: 30px 0 22px 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      &:nth-child(1){
+      @media (max-width: $breakpoint-md) {
+        grid-template-columns: 1fr;
+      }
+
+      &:nth-child(1) {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
       }
     }
@@ -573,26 +743,51 @@
       }
 
       & .form-control {
-       &__input,&__textarea{
-         border: 1px solid rgba(178, 144, 124, 0.2);
-       }
+        &__input, &__textarea {
+          border: 1px solid rgba(178, 144, 124, 0.2);
+        }
 
       }
     }
 
-    &__icon {
-      width: 51%;
-      height: 51%;
-      object-fit: contain;
-      object-position: center;
-
-      &-wrap {
-        width: 110px;
-        height: 110px;
-        border-radius: 100%;
-        background: #FBF7F3;
+    & .author {
+      @media (max-width: $breakpoint-md) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 11px;
       }
+
+      &__icon {
+        width: 51%;
+        height: 51%;
+        object-fit: contain;
+        object-position: center;
+
+        &-wrap {
+          width: 110px;
+          height: 110px;
+          border-radius: 100%;
+          background: #FBF7F3;
+          @media (max-width: $breakpoint-md) {
+            margin-right: 19px;
+          }
+        }
+      }
+
+      &__name {
+        font-size: 20px;
+        @media (min-width: $breakpoint-md) {
+         margin-right: 40px;
+        }
+        @media (max-width: $breakpoint-md) {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+
     }
+
 
     &__author {
       font-size: 20px;
@@ -744,7 +939,7 @@
     padding-top: 45px;
   }
 
-  & .btn-transparent {
+  &__btn {
     margin-top: 50px;
     @media (max-width: $breakpoint-md) {
       margin-top: 30px;

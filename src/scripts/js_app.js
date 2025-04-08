@@ -184,15 +184,12 @@ jQuery(function ($) {
         _functions.closePopup();
     });
 
-    _functions.coolNav = function () {
-        let r = $(".js-header");
-        $(window).on("scroll", (function () {
-                $(window).scrollTop() > 30 ? r.removeClass("transparent") : r.addClass("transparent")
+/*(window).scrollTop() > 30 ? r.removeClass("transparent") : r.addClass("transparent")
             }
         ));
     };
     _functions.coolNav();
-
+*/
 
 
     /* Function on page scroll */

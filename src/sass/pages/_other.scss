@@ -88,6 +88,7 @@
 .s-error, .s-thanks {
   position: relative;
   height: 100vh;
+
   & .logo__wrap {
     object-fit: contain;
     margin: 0 auto;
@@ -97,6 +98,7 @@
       height: 70px;
     }
   }
+
   & .content {
     position: absolute;
     z-index: 3;
@@ -112,14 +114,6 @@
     & .heading, & .description {
       color: $white-color;
     }
-  }
-  & .bg {
-    position: absolute;
-    top: 0;
-    lefT: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
   }
 }
 
@@ -168,7 +162,7 @@
 }
 
 .s-error {
-padding-top: 44px;
+  padding-top: 44px;
 
   & .logo__wrap {
     width: 255px;
@@ -177,6 +171,11 @@ padding-top: 44px;
   }
 
   & .content {
+    & .heading, .description, .btn-primary {
+      z-index: 9;
+      position: relative;
+    }
+
     & .heading {
       @include fontSize(45, 70);
       margin-bottom: 30px;
@@ -196,6 +195,40 @@ padding-top: 44px;
 
     & .btn-primary {
 
+    }
+
+    & .img-404 {
+      max-width: 680px;
+      margin: 0 auto 40px auto;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  & .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    &:nth-child(1) {
+      z-index: 1;
+    }
+    &:nth-child(2) {
+      z-index: 3;
+    }
+
+    &:nth-child(2) {
+
+    }
+
+    &__wrap {
+      position: absolute;
+      top: 0;
+      lefT: 0;
+      height: 100%;
+      width: 100%;
     }
   }
 }

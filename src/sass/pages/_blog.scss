@@ -224,11 +224,13 @@
 }
 
 .share {
+  margin: 36px 0 92px;
   padding: 30px 0;
   border: 1px solid rgba(50, 60, 98, 0.2);
   border-width: 1px 0 1px 0;
   @media (max-width: $breakpoint-md) {
     padding: 23px 0;
+    margin: 44px 0;
   }
 
   &__title {

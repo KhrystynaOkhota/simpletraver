@@ -250,8 +250,8 @@
   & .burger {
     display: flex;
     cursor: pointer;
-    width: 18px;
-    height: 16px;
+    width: 30px;
+    height: 20px;
     justify-content: space-between;
     flex-direction: column;
     @include transition(.3);
@@ -261,15 +261,16 @@
 
     & > span {
 
-      height: 1px;
+      height: 4px;
       background-color: $accent-color;
-      border-radius: 1.5px;
+      border-radius: 4px;
       @include transition(.5);
       z-index: 999;
       width: 100%;
 
-      &:nth-child(1) {
+      &:nth-child(2) {
         width: 70%;
+        margin-left:auto;
       }
     }
 
@@ -290,7 +291,7 @@
             background-color: $whiteColor;
 
             &:nth-child(1) {
-              transform: translateY(6.5px) rotate(45deg);
+              transform: translateY(8px) rotate(45deg);
             }
 
             &:nth-child(2) {

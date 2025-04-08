@@ -380,4 +380,7 @@
 
 .mb-33 {
   margin-bottom: 33px;
+  @media (max-width: $breakpoint-md) {
+    margin-bottom: 15px;
+  }
 }

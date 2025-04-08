@@ -68,6 +68,22 @@
 
 
 
+.icon-calendar:before {
+  content: "\e90c";
+  color: #aaa;
+}
+.icon-ar-down:before {
+  content: "\e90d";
+  color: #aaa;
+}
+.icon-close:before {
+  content: "\e90e";
+  color: #313a57;
+}
+.icon-twitter:before {
+  content: "\e90f";
+  color: #fff;
+}
 .icon-time:before {
   content: "\e90a";
 }
@@ -140,9 +156,11 @@
 }
 
 .h4 {
-  @include fontSize(20, 30);
+  @include fontSize(25, 30);
 }
-
+.h5{
+  @include fontSize(20, 25);
+}
 .h6 {
-  font-size: 17px;
+  @include fontSize(15, 17);
 }

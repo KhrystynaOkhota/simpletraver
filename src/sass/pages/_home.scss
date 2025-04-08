@@ -131,11 +131,27 @@
 
 .s-recommended-resort {
   padding: 92px 0;
+  @media (max-width: $breakpoint-xl) {
+
+    padding: 43px 0 50px 0;
+    & .heading{
+      text-align: center;
+    }
+
+  }
 
 }
 
 .s-popular-resort {
   padding-bottom: 100px;
+  @media (max-width: $breakpoint-xl) {
+    padding-bottom: 50px;
+    padding-top: 43px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    & .heading{
+      text-align: center;
+    }
+  }
 }
 
 .s-recommended-prom {

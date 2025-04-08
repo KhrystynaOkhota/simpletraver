@@ -102,9 +102,9 @@ body {
 
 
 .body-padding {
-  height: 161px;
-  @media (max-width: $breakpoint-md) {
-    height: 85px;
+  height: 155px;
+  @media (max-width: $breakpoint-lg) {
+    height: 80px;
   }
 }
 
@@ -141,7 +141,7 @@ body {
     padding: 0;
     z-index: 1;
     width: 100%;
-    height: 100%;
+    //    height: 100%;
     opacity: 0;
 
     &.swiper-initialized {
@@ -157,13 +157,14 @@ body {
     position: relative;
     bottom: 0;
     margin-top: 0;
-    display: none;
+    // display: flex;
     flex-direction: row;
     justify-content: center;
     z-index: 2 !important;
-
+    display: none;
     @media (max-width: $breakpoint-md) {
       display: flex;
+      margin-top: 30px;
     }
 
     &.swiper-pagination-horizontal {
@@ -172,17 +173,18 @@ body {
 
     &-bullet {
       font-size: 0;
-      width: 6px;
-      height: 6px;
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 100%;
-      margin: 0 3.5px;
+      width: 11px;
+      height: 11px;
+      background: rgba(217, 217, 217, 1);
+      border-radius: 11px;
+      margin: 0 5px;
 
       @include transition(.4);
 
       &:hover, &-active {
-        background-color: rgba(255, 255, 255, 1);
-        transform: scale(1.2);
+        background-color: $accent-color;
+        width: 30px;
+        // transform: scale(1.2);
       }
     }
   }

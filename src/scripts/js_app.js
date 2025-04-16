@@ -348,6 +348,18 @@ if ($('.select-box').length) {
 
 
 // read more
+
+if (".details")
+    if ($('.details').length) {
+        $('.details').not('.animated').each(function () {
+
+               console.log($(this));
+
+        });
+    };
+
+
+
 $('.read-more-toggle').on('click', function () {
     var $tp = $(this).parent();
     if ($(this).hasClass('active')) {

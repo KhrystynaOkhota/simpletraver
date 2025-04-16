@@ -432,6 +432,20 @@
           }
         }
       }
+
+      & .btn-zooom {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        z-index: 2;
+
+        i {
+          font-size: 34px;
+          color: #fff;
+        }
+      }
     }
 
     &__info {
@@ -1027,11 +1041,46 @@
 }
 
 
-.read-more-text-wrapper {
-  height: 330px;
-  overflow: hidden
-}
+.read-more {
+  &-text-wrapper {
+    height: 330px;
+    overflow: hidden
+  }
 
+  &-button {
+    display: inline-block;
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 17px;
+    color: #1D9F96;
+    cursor: pointer;
+  }
+
+  &-toggle {
+    & span {
+      &:nth-child(1) {
+        display: block;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+
+    &.active {
+      & span {
+        &:nth-child(1) {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+  }
+
+}
 
 .tab {
   padding-bottom: 100px;
